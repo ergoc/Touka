@@ -7,14 +7,13 @@ load_dotenv()
 
 @dataclass
 class ModelConfig:
-    repo_id: str = "mradermacher/Llama-3.2-1B-Instruct-Uncensored-GGUF"
-    filename: str = "Llama-3.2-1B-Instruct-Uncensored.Q5_K_M.gguf"
+    filename: str = "Nidum-Llama-3.2-3B-Uncensored-F16.gguf"
     model_dir: str = "./models"
-    n_ctx: int = 2048
+    n_ctx: int = 4096
     n_threads: int = 1
     n_batch: int = 512
     n_gpu_layers: int = 0
-    max_tokens: int = 256
+    max_tokens: int = 512
     temperature: float = 0.8
     top_k: int = 40
     top_p: float = 0.95

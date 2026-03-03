@@ -2,7 +2,7 @@ import sys
 import uvicorn
 
 from config import cfg
-from touka.core.engine import engine
+from touka.core.model import model
 from touka.core.logger import logger
 from touka.core.touka import NAME, VERSION
 from touka.api.app import create_app
@@ -11,7 +11,7 @@ from touka.api.app import create_app
 def boot() -> None:
     logger.info("Booting {} v{}", NAME, VERSION)
 
-    if not engine.load():
+    if not model.load():
         logger.error("Failed to load model. Exiting.")
         sys.exit(1)
 
@@ -26,5 +26,4 @@ def boot() -> None:
     )
 
 
-if __name__ == "__main__":
-    boot()
+boot()

@@ -3,4 +3,4 @@ uvicorn[standard]>=0.32.0
 pydantic>=2.9.0
 loguru>=0.7.3
 python-dotenv>=1.2.2
-huggingface-hub>=0.26.0
+llama-cpp-python>=0.3.0
