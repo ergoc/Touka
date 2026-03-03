@@ -41,11 +41,9 @@ class Model:
                 n_batch=cfg.model.n_batch,
                 n_gpu_layers=cfg.model.n_gpu_layers,
                 chat_format="llama-3",
-                use_mlock=True,
-                use_mmap=True,
                 verbose=False,
             )
-            logger.success("Touka v{} is awake ✓", cfg.version)
+            logger.success("Loaded Touka v{}", cfg.version)
             return True
         except Exception as exc:
             logger.error("Failed to load Touka: {}", exc)

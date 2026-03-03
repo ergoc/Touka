@@ -7,13 +7,13 @@ load_dotenv()
 
 @dataclass
 class ModelConfig:
-    filename: str = "Nidum-Llama-3.2-3B-Uncensored-F16.gguf"
+    filename: str = "Llama-3.2.gguf"
     model_dir: str = "./models"
-    n_ctx: int = 4096
+    n_ctx: int = 2048
     n_threads: int = 1
-    n_batch: int = 512
+    n_batch: int = 128
     n_gpu_layers: int = 0
-    max_tokens: int = 512
+    max_tokens: int = 256
     temperature: float = 0.8
     top_k: int = 40
     top_p: float = 0.95
